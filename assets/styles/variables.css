@@ -1,0 +1,9 @@
+:root {
+  --primary : #D8EADD;
+  --primary-tint : #A2CDAE;
+
+  --surface-low : #FFFFFF;
+  --surface : #F6F5F5;
+  --surface-high : #EAEAEA;
+  --on-surface : #32393B;
+}
