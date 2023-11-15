@@ -243,7 +243,7 @@ nav {
   background: color-mix(in srgb, var(--on-surface) 8%, transparent);
 }
 
-.clicked:hover .state-layer {
+.segment:active .state-layer {
   background: color-mix(in srgb, var(--on-surface) 12%, transparent);
 }
 

@@ -116,12 +116,10 @@ update();
 
 function changePage(direction = 'forward') {
     if (direction === 'forward' && pageNbr < data[0].length -1) {
-      next.classList.remove('clicked');
       previous.style.pointerEvents = 'all';
       previous.style.opacity = '1';
       pageNbr++;
     } else if (direction === 'backward' && pageNbr > 0) {
-      previous.classList.remove('clicked');
       next.style.pointerEvents = 'all';
       next.style.opacity = '1';
       pageNbr--;
@@ -129,15 +127,9 @@ function changePage(direction = 'forward') {
   update();
 }
 
-previous.addEventListener('mousedown', () => previous.classList.add('clicked'));
 previous.addEventListener('mouseup', () => changePage('backward'));
-previous.addEventListener('touchstart', () =>
-  previous.classList.add('clicked')
-);
 previous.addEventListener('touchend', () => changePage('backward'));
-next.addEventListener('mousedown', () => next.classList.add('clicked'));
 next.addEventListener('mouseup', () => changePage('forward'));
-next.addEventListener('touchstart', () => next.classList.add('clicked'));
 next.addEventListener('touchend', () => changePage('forward'));
 
 document.addEventListener('keydown', (e) => {
