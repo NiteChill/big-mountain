@@ -9,5 +9,16 @@
     "rating": 4.5,
     "rating_comment": "Beautiful mountain, very big, i like it very much",
     "conclusion": "Very cool mountain, should definitely go there, beautiful landscape, very snowy, very white :)"
+  },
+  {
+    "name": "Everest",
+    "mount": true,
+    "picture_url": "../../assets/img/Everest.png",
+    "picture_copyright": "britannica",
+    "altitude": 8849,
+    "rank": 1,
+    "rating": 4.5,
+    "rating_comment": "Beautiful mountain, very big, i like it very much",
+    "conclusion": "Very cool mountain, should definitely go there, beautiful landscape, very snowy, very white :)"
   }
 ]

@@ -25,6 +25,15 @@ body {
   color: var(--on-surface);
 }
 
+body::-webkit-scrollbar {
+  background: color-mix(in srgb, var(--on-surface) 12%, transparent);
+  width: .4rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--on-surface) 32%, transparent);
+}
+
 .title {
   font-size: 2.25rem;
   font-weight: 300;
@@ -60,6 +69,7 @@ body {
 .wrapper {
   display: flex;
   height: 100%;
+  transform: translateX(0);
   transition: transform 0.5s cubic-bezier(0.2, 0, 0, 1);
   min-width: 100%;
 }
@@ -127,6 +137,7 @@ body {
   border-radius: 3rem;
   margin-right: -0.5rem;
   padding-right: 0.5rem;
+  background: var(--surface-low);
 }
 
 .altitude {
@@ -173,4 +184,64 @@ body {
   font-size: 1.5rem;
   line-height: 2rem;
   gap: 2.5rem;
+}
+
+.conclusion {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2.5rem;
+}
+
+.segment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.segment p {
+  font-weight: 400;
+  font-size: .75rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100rem;
+}
+
+.state-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .5rem;
+  border-radius: inherit;
+}
+
+.state-layer span {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.segment:hover .state-layer {
+  background: color-mix(in srgb, var(--on-surface) 8%, transparent);
+}
+
+.clicked:hover .state-layer {
+  background: color-mix(in srgb, var(--on-surface) 12%, transparent);
 }
