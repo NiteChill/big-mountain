@@ -90,8 +90,7 @@ function createContainers(item) {
   ratings.append(rating);
 
   const conclusion = document.createElement('div');
-  conclusion.innerHTML =
-    `<div class="text-container">
+  conclusion.innerHTML = `<div class="text-container">
       <span class="material-symbols-outlined">article</span>
       <p>conclusion</p>
     </div>
@@ -110,8 +109,8 @@ function update() {
   }
   const wrappers = [...document.querySelectorAll('.wrapper')];
   wrappers.map((wrapper) => {
-    wrapper.style.transform = `translateX(${pageNbr * -100}%)`
-  })
+    wrapper.style.transform = `translateX(${pageNbr * -100}%)`;
+  });
 }
 update();
 
@@ -132,9 +131,18 @@ function changePage(direction = 'forward') {
 
 previous.addEventListener('mousedown', () => previous.classList.add('clicked'));
 previous.addEventListener('mouseup', () => changePage('backward'));
-previous.addEventListener('touchstart', () => previous.classList.add('clicked'));
+previous.addEventListener('touchstart', () =>
+  previous.classList.add('clicked')
+);
 previous.addEventListener('touchend', () => changePage('backward'));
 next.addEventListener('mousedown', () => next.classList.add('clicked'));
 next.addEventListener('mouseup', () => changePage('forward'));
 next.addEventListener('touchstart', () => next.classList.add('clicked'));
 next.addEventListener('touchend', () => changePage('forward'));
+
+document.addEventListener('keydown', (e) => {
+  console.log(e);
+  e.key === 'ArrowRight'
+    ? changePage('forward')
+    : e.key === 'ArrowLeft' && changePage('backward');
+});
