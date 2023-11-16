@@ -127,10 +127,8 @@ function changePage(direction = 'forward') {
   update();
 }
 
-previous.addEventListener('mouseup', () => changePage('backward'));
-previous.addEventListener('touchend', () => changePage('backward'));
-next.addEventListener('mouseup', () => changePage('forward'));
-next.addEventListener('touchend', () => changePage('forward'));
+previous.addEventListener('click', () => changePage('backward'));
+next.addEventListener('click', () => changePage('forward'));
 
 document.addEventListener('keydown', (e) => {
   e.key === 'ArrowRight'
