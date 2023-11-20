@@ -62,9 +62,9 @@ function createContainers(item) {
     stars.push(1);
     if (i === 1 && item.rating % 1 !== 0) {
       stars.push(0.5);
-      for (let i = 5 - stars.length; i > 0; i--) stars.push(0);
     }
   }
+  for (let i = 5 - stars.length; i > 0; i--) stars.push(0);
 
   rating.innerHTML = `<div class="text-container">
       <span class="material-symbols-outlined">thumbs_up_down</span>
