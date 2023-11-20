@@ -92,7 +92,7 @@ function createContainers(item) {
   const conclusion = document.createElement('div');
   conclusion.innerHTML = `<div class="text-container">
       <span class="material-symbols-outlined">article</span>
-      <p>conclusion</p>
+      <p>Conclusion</p>
     </div>
     <p>${item.conclusion}</p>`;
   conclusion.className = 'conclusion';
